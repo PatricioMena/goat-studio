@@ -1,0 +1,703 @@
+/************************************/
+/* BELOW 1344px (Smaller desktops) */
+/***********************************/
+
+@media (max-width: 84em) {
+  .header {
+    background-attachment: scroll;
+  }
+
+  .hero {
+    max-width: 120rem;
+  }
+
+  /* .container {
+    max-width: 120rem;
+    padding: 0 2.4rem;
+  } */
+
+  .testimonials-wrapper {
+    flex-flow: row wrap;
+  }
+
+  .section-header--testimonials::after {
+    left: 6rem;
+  }
+
+  .section-services,
+  .section-portfolio {
+    padding: 9.8rem 0;
+  }
+
+  .section-portfolio {
+    background-attachment: scroll;
+  }
+
+  .portfolio-container {
+    flex-flow: row wrap;
+    justify-content: center;
+  }
+
+  .portfolio-text-box {
+    align-items: center;
+  }
+
+  .btn-portfolio {
+    align-self: center;
+  }
+
+  .portfolio-description {
+    max-width: 50ch;
+    text-align: center;
+  }
+
+  .section-services,
+  .section-accordion,
+  .section-cta {
+    background-attachment: fixed;
+  }
+}
+
+/*************************************/
+/* BELOW 1200px (Landscape Tablets) */
+/************************************/
+
+@media (max-width: 75em) {
+  html {
+    font-size: 56.25%;
+  }
+  .section-header--testimonials::after {
+    top: -15rem;
+    left: 3rem;
+    transform: scale(0.9);
+  }
+
+  .section-testimonials {
+    padding-bottom: 6.4rem;
+  }
+
+  .grid--footer {
+    column-gap: 2.8rem;
+  }
+
+  /* Services page */
+  .page-cover-subtitle {
+    font-size: 3rem;
+  }
+
+  /* FAQ page*/
+  .accordion {
+    width: 80%;
+    padding: 4rem 0 6.4rem 0;
+  }
+}
+
+/**************************/
+/* BELOW 960px (Tablets) */
+/**************************/
+
+@media (max-width: 60em) {
+  .hero {
+    flex-flow: column wrap;
+    gap: 4.8rem;
+  }
+
+  .hero-text-box {
+    align-items: center;
+  }
+
+  .hero-text-box .heading-primary {
+    text-align: center;
+    line-height: 1.1;
+  }
+
+  .hero-description {
+    max-width: 45ch;
+    text-align: center;
+  }
+
+  .hero-btns {
+    justify-content: center;
+  }
+
+  .hero-form-container {
+    min-width: 100%;
+  }
+
+  .testimonial-logo {
+    height: 17rem;
+    width: 22rem;
+  }
+
+  .hero-form-box {
+    grid-column: 4/10;
+  }
+
+  .section-services,
+  .section-portfolio {
+    padding: 8rem 0;
+  }
+
+  .portfolio-container {
+    gap: 6rem;
+  }
+
+  .swiper-container--portfolio {
+    width: 100%;
+  }
+
+  .swiper {
+    height: 100%;
+  }
+
+  .section-header--testimonials::after {
+    top: -20rem;
+    left: 1rem;
+    transform: scale(0.7);
+  }
+
+  .grid {
+    grid-template-columns: 0.5fr repeat(10, 1fr) 0.5fr;
+    grid-template-rows: 0.5fr repeat(2, 1fr);
+    column-gap: 3rem;
+    row-gap: 4rem;
+  }
+
+  .card-title {
+    margin-bottom: 2.8rem;
+  }
+
+  .services-card:nth-child(2n + 1) {
+    grid-column: 2/7;
+  }
+
+  .services-card:nth-child(2n) {
+    grid-column: 7/12;
+  }
+
+  .services-card {
+    grid-column-start: 2;
+    grid-column: span 4;
+  }
+
+  .swiper {
+    height: 100%;
+  }
+
+  .swiper-container--testimonial {
+    max-width: 100%;
+  }
+
+  .testimonial-slide {
+    gap: 7rem;
+    max-height: 26rem;
+    padding: 3.2rem 3.8rem 3.2rem 8.6rem;
+  }
+
+  .plan-card,
+  .value-box {
+    grid-column: 4/10;
+  }
+
+  .value-box {
+    height: 70rem;
+  }
+
+  .plan-card--pro {
+    box-shadow: 0 0.2rem 0.8rem 0.6rem var(--clr-violet-500);
+    top: 0;
+  }
+
+  /* MOBILE NAVIGATION */
+  .toggle-button {
+    display: block;
+    z-index: 99999;
+  }
+
+  .main-nav-list {
+    display: flex;
+    position: absolute;
+    top: 9.8rem;
+    z-index: 9999;
+    left: 0;
+    flex-direction: column;
+    justify-content: center;
+    gap: 4.8rem;
+    width: 100%;
+    height: 100vh;
+    background: rgba(255, 255, 255, 0.8);
+    -webkit-backdrop-filter: blur(5px);
+    backdrop-filter: blur(10px);
+    padding: 2.4rem 4rem;
+    pointer-events: none;
+    /* display: none; */
+    transform: translateX(-100%);
+    overflow-x: hidden;
+    transition: all 400ms ease-in-out;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+  }
+
+  .active .main-nav-list {
+    display: flex;
+    transform: translateY(0);
+    opacity: 1;
+    pointer-events: auto;
+    visibility: visible;
+  }
+
+  .main-nav {
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+  }
+
+  .active .icon-mobile-nav[name='close-outline'] {
+    display: block;
+  }
+
+  .active .icon-mobile-nav[name='menu-outline'] {
+    display: none;
+  }
+
+  .main-nav-list--clr-invert {
+    background: rgba(59, 58, 59, 0.8);
+  }
+
+  .sticky .main-nav-list--clr-invert {
+    background: rgba(255, 255, 255, 0.8);
+  }
+
+  .main-nav-link:link,
+  .main-nav-link:visited {
+    font-size: var(--fs-700);
+  }
+
+  .page-cover {
+    padding: 0 5rem;
+  }
+
+  .page-cover-subtitle {
+    line-height: 1.1;
+    font-size: 2.8rem;
+  }
+
+  /* Services page */
+  .service-item {
+    padding: 4rem 10rem;
+  }
+
+  .grid-2-col {
+    grid-template-columns: repeat(12, 1fr);
+  }
+
+  .service-item picture {
+    border-radius: 10px;
+    grid-column: 1/13;
+    grid-row: 1;
+    transform: scale(1.1);
+  }
+
+  .service-item section {
+    grid-column: 1/13;
+    grid-row: 1;
+    z-index: 1;
+  }
+
+  .service-item-text-box {
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 5px;
+  }
+
+  /* CTA page */
+  .cta {
+    grid-template-columns: 3fr 2fr;
+  }
+
+  .cta-form {
+    grid-template-columns: 1fr;
+    row-gap: 3.8rem;
+  }
+  .cta-message {
+    grid-column: span 1;
+  }
+
+  .btn--cta {
+    width: 100%;
+  }
+
+  .cta-text,
+  .cta-links {
+    margin-bottom: 2.4rem;
+  }
+}
+
+/**************************/
+/* BELOW 720px (Smaller tablets) */
+/**************************/
+
+@media (max-width: 45em) {
+  .hero-form-box {
+    grid-column: 3/11;
+  }
+
+  .grid {
+    column-gap: 1rem;
+  }
+
+  .services-card:nth-child(2n + 1) {
+    grid-column: 1/7;
+  }
+
+  .services-card:nth-child(2n) {
+    grid-column: 7/13;
+  }
+
+  .swipper-btn {
+    display: none;
+    visibility: hidden;
+  }
+
+  .swiper-container {
+    display: flex;
+    align-items: center;
+  }
+
+  .swiper-conta.swiper-container--testimonialiner--testimonial {
+    height: 40rem;
+  }
+
+  .section-header--testimonials::after {
+    top: -20rem;
+    left: 1rem;
+    transform: scale(0.7);
+  }
+
+  .testimonial-swiper {
+    overflow: hidden;
+  }
+
+  /* .swiper-slide--testimonial{
+    height: 80%;      
+  } */
+
+  .testimonial-logo {
+    display: none;
+  }
+
+  .testimonial-slide {
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .testimonial-slide {
+    min-height: 28rem;
+    padding: 2.4rem 3.2rem;
+  }
+
+  .testimonial-slide blockquote {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+
+  .testimonial-text {
+    margin-bottom: 1.8rem;
+    line-height: 1.3;
+  }
+
+  .testimonial-author {
+    margin-bottom: 0.5rem;
+  }
+
+  .swiper-pagination--testimonials {
+    position: relative;
+    top: -4rem;
+  }
+
+  .plan-card--pro::after {
+    padding: 0.5em 6em;
+  }
+
+  .grid--footer {
+    grid-template-columns: 1fr;
+    align-items: center;
+    justify-items: center;
+    text-align: center;
+    row-gap: 6.4rem;
+    column-gap: 1rem;
+  }
+
+  .footer-heading {
+    margin-bottom: 1.8rem;
+  }
+
+  /* Services page*/
+  .service-item-title {
+    font-size: 6.8rem;
+    margin-bottom: 2.4rem;
+  }
+
+  /* CTA page */
+  .section-cta {
+    padding: 8rem 0 8rem;
+  }
+  .cta {
+    grid-template-columns: 1fr;
+  }
+
+  .cta-text-box {
+    padding: 4.8rem 3.2rem;
+  }
+
+  .cta-img-box {
+    display: none;
+  }
+}
+
+@media (min-width: 45em) {
+  .even-columns {
+    grid-auto-flow: column;
+    grid-auto-columns: 1fr;
+  }
+}
+
+/**************************/
+/* BELOW 544px (Phones) */
+/**************************/
+
+@media (max-width: 34em) {
+  html {
+    font-size: 54%;
+  }
+
+  body {
+    line-height: 1.1;
+  }
+
+  .logo {
+    height: 3.8rem;
+  }
+
+  .section-hero {
+    padding: 6.4rem 0 6.4rem 0;
+    max-width: 100%;
+  }
+
+  .hero-description {
+    max-width: 38ch;
+    text-align: center;
+  }
+
+  .form-input {
+    padding: 2.25rem;
+  }
+
+  .hero-form-box {
+    grid-column: 2/12;
+  }
+
+  .hero-btns {
+    flex-direction: column;
+  }
+
+  .form-label {
+    top: 1.7rem;
+  }
+
+  .section-description {
+    padding: 0 6rem;
+    margin-bottom: 1.2rem;
+  }
+
+  .grid {
+    row-gap: 2rem;
+  }
+
+  .card-title {
+    margin-bottom: 0;
+  }
+
+  .services-card:nth-child(2n + 1) {
+    grid-column: 2/12;
+  }
+
+  .services-card:nth-child(2n) {
+    grid-column: 2/12;
+  }
+
+  .portfolio-text-box {
+    text-align: center;
+  }
+
+  .section-logos {
+    padding: 2.4rem;
+  }
+
+  .section-header--testimonials::after {
+    top: -20rem;
+    left: -7rem;
+  }
+
+  .value-title-back {
+    margin-bottom: 2rem;
+  }
+
+  .value-description-text {
+    padding: 0 4rem;
+    font-size: var(--fs-700);
+    line-height: 1.4;
+  }
+
+  .plan-card,
+  .value-box {
+    grid-column: 1/13;
+  }
+  .plan-price::before {
+    top: -30%;
+  }
+
+  .pricing-header {
+    gap: 2rem;
+  }
+
+  .page-cover {
+    padding: 0 2rem;
+  }
+
+  .page-cover-subtitle {
+    line-height: 1.2;
+    font-size: 2.4rem;
+  }
+
+  /* Services page */
+  .service-item {
+    padding: 4rem 4rem;
+  }
+
+  .service-item-title {
+    font-size: 6rem;
+  }
+
+  /* FAQ page*/
+  .accordion {
+    width: 90%;
+    padding: 2rem 0 6.4rem 0;
+  }
+
+  .accordion-item-header {
+    padding-right: 4.8rem;
+    line-height: 1.3;
+  }
+}
+
+/**************************/
+/* BELOW 416px (Phones) */
+/**************************/
+
+@media screen and (max-width: 26em) {
+  .hero-form-container {
+    padding: 0;
+  }
+
+  .hero-form-box {
+    grid-column: 2/12;
+  }
+
+  .hero-description {
+    max-width: 30ch;
+  }
+
+  .section-heading {
+    margin-bottom: 2.6rem;
+  }
+
+  .section-description {
+    padding: 0 1.2rem;
+  }
+
+  .services-card:nth-child(2n + 1) {
+    grid-column: 1/13;
+  }
+
+  .services-card:nth-child(2n) {
+    grid-column: 1/13;
+  }
+
+  .swiper-container {
+    width: 100%;
+  }
+
+  .logos img {
+    max-height: 4.8rem;
+  }
+
+  .section-header--testimonials::after {
+    top: -20rem;
+    left: -2rem;
+  }
+
+  .swiper-container {
+    align-items: flex-start;
+  }
+
+  .swiper-container--testimonial {
+    max-width: 100%;
+  }
+
+  .pricing-header {
+    align-items: center;
+  }
+
+  .pricing-btns-wrapper {
+    flex-direction: column;
+  }
+
+  .plan-card {
+    padding: 6.4rem 3.8rem 8rem 3.8rem;
+  }
+
+  .plan-item {
+    font-size: var(--fs-600);
+  }
+
+  .page-cover {
+    padding: 0;
+  }
+
+  .page-cover-subtitle {
+    line-height: 1.3;
+    font-size: 2rem;
+  }
+
+  /* Services page */
+  .service-item {
+    padding: 4rem 1.6rem;
+  }
+
+  /* Services page*/
+  .service-item-title {
+    font-size: 4rem;
+  }
+
+  /* FAQ page*/
+  .section-accordion {
+    padding: 6rem 0 6.4rem;
+  }
+
+  .accordion {
+    min-width: 100%;
+    padding: 2.4rem 0 2.4rem 0;
+  }
+
+  .accordion-item {
+    font-size: var(--fs-500);
+  }
+
+  .accordion-item-header::after {
+    height: 2.4rem;
+    width: 2.4rem;
+  }
+}
